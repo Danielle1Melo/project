@@ -1,0 +1,44 @@
+.container {
+    background-color: var(--first-blue);
+    height: 115.94px;
+    padding: 0px 150px 0px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menuItens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 53px;
+   
+}
+
+
+.menuItens, .sairBtn {
+    user-select: none;
+    display: flex;
+   
+}
+
+.menuItens > button,.sairBtn>button {
+    text-decoration: none;
+    border: none !important;
+    background-color: transparent !important;
+
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 20px;
+
+
+    color: var(--white);
+    cursor: pointer;
+}
+
+.sairBtn {
+    display: flex;
+    gap: 15px;
+    padding: 0px 82px 0px 0px;
+}

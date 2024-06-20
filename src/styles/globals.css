@@ -1,0 +1,33 @@
+:root{
+  --first-blue: #06233D;
+  --second-blue: #003B6B;
+  --third-blue: #D6E7F4;
+  --danger: #AD1212;
+  --danger-50: #FFE5E5;
+  --danger-10: #FD00001A;
+  --yellow: #FFCC02;
+  --yellow-50: #FFFAE5;
+  --yellow-10:#FDCD001A;
+
+  --white: #FFFFFF;
+  --white-50: #FBFBFB;
+  --gray: #6C737F;
+  --gray-50: #E5E7EB;
+  --gray-10: #06233D1A;
+  --numbers: #111927;
+  --search: #ACB1C6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: var(--white-50);
+}
+
+
+
+
