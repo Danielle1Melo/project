@@ -10,7 +10,7 @@ export default function UserPage() {
       <HeaderPage />
 
       <div className={styled.content}>
-        <div className={styled.left}>
+        <div>
           <LatestPurchases />
           <NextInvoice />
         </div>

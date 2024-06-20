@@ -1,30 +1,9 @@
-.container {
-    padding: 2.9375rem 15.525rem;
-
-}
 
 .container>h1 {
+    padding: 2.9375rem 15.525rem;
     font-size: 40px;
     font-weight: 700;
-
     text-transform: capitalize;
-}
-
-.card {
-    margin-top: 2rem;
-    padding: 55px;
-    gap: 25px;
-    border-radius: 20px;
-    background-color: var(--white);
-    box-shadow: 4px 4px 50px 4px #00000026;
-
-}
-
-.card>h3 {
-    color: var(--first-blue);
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 20px;
 }
 
 .sections {
@@ -40,24 +19,4 @@
     padding: 46px;
     border-radius: 20px;
     background-color: var(--yellow-10);
-}
-
-.sections>section>p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
-.sections>section>h3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(numbers);
-    font-size: 27px;
-    font-weight: 700;
-    text-transform: capitalize;
 }

@@ -1,0 +1,23 @@
+/* .card{
+    padding: 46px;
+} */
+
+.card>p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.card>h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(numbers);
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
