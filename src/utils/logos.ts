@@ -1,13 +1,9 @@
-import miriranLogo from "@/assets/icons/mirian.svg";
 import welcomeImg from "@/assets/icons/welcome.svg";
-import user from "@/assets/icons/user.svg";
-import padlock from "@/assets/icons/padlock.svg";
 import goOut from "@/assets/icons/goOut.svg";
+import i9onLogo from "@/assets/icons/i9on.svg";
 
 export const LOGO = {
-  Mirian: miriranLogo,
+  I9on: i9onLogo,
   Welcome: welcomeImg,
-  User: user,
-  Password: padlock,
   Sair: goOut,
 };

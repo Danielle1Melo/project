@@ -4,6 +4,7 @@ import { LOGO } from "@/utils/logos";
 import Image from "next/image";
 import styled from "../../styles/allStyles/authenticated.module.css";
 import { useRouter } from "next/navigation";
+import { Lock, User } from "@phosphor-icons/react";
 
 export default function AuthenticatedSession() {
   const router = useRouter();
@@ -15,25 +16,25 @@ export default function AuthenticatedSession() {
   return (
     <main>
       <section className={styled.header}>
-        <Image src={LOGO.Mirian} alt="" />
+        <Image src={LOGO.I9on} alt="" className={styled.logo} />
       </section>
       <div className={styled.sessions}>
         <section className={styled.firstSession}>
           <h1>Área do Cliente</h1>
           <p>Seja bem vindo(a)!</p>
-          <Image src={LOGO.Welcome} alt="" />
+          <Image src={LOGO.Welcome} alt="" className={styled.welcomeImage} />
         </section>
         <section className={styled.SecondSession}>
-          <h3>Login Mirian</h3>
+          <h3>Login i9ON</h3>
           <p>Acesse com seus dados</p>
           <form className={styled.form}>
             <div className={styled.inputs}>
-              <Image src={LOGO.User} alt="" width={35} height={35} />
+              <User size={30} className={styled.icon} />
               <input type="text" placeholder="Usuário" />
             </div>
 
             <div className={styled.inputs}>
-              <Image src={LOGO.Password} alt="" width={35} height={35} />
+              <Lock size={30} className={styled.icon} />
               <input type="password" placeholder="Senha" />
             </div>
 

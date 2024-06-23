@@ -1,5 +1,6 @@
 "use client";
 
+import { priceFormatter } from "@/utils/formatteNumber";
 import styled from "../../../../styles/allStyles/purchases/table.module.css";
 
 export function TablePurchases() {
@@ -16,19 +17,19 @@ export function TablePurchases() {
         <tbody>
           <tr>
             <td>Abastecimento</td>
-            <td>R$259,20</td>
+            <td>{priceFormatter.format(46.08)}</td>
           </tr>
           <tr>
             <td>Shopping</td>
-            <td>R$259,20</td>
+            <td>{priceFormatter.format(46.08)}</td>
           </tr>
           <tr>
             <td>Restaurante</td>
-            <td>R$259,20</td>
+            <td>{priceFormatter.format(46.08)}</td>
           </tr>
           <tr>
             <td>Conveniência</td>
-            <td>R$259,20</td>
+            <td>{priceFormatter.format(46.08)}</td>
           </tr>
         </tbody>
       </table>

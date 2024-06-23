@@ -3,22 +3,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: Fixed (1, 440px)px;
-  height: 115.94px;
-  padding: 0px 150px 0px 150px;
+  height: 119.95px;
+
 }
 
 .sessions {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: var(--second-blue);
-  margin-top: 12rem;
-
-  width: Hug (1, 089px)px;
-  height: Hug (524px)px;
-
-
+  margin-top: 15rem;
 }
 
 .firstSession {
@@ -31,11 +24,13 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 57.6px;
+  color: var(--second-blue);
   text-transform: capitalize;
 }
 
 .firstSession>p {
-  font-size: 38px;
+  color: var(--first-blue);
+  font-size: 40px;
   font-weight: 400;
   line-height: 48px;
 }
@@ -50,20 +45,21 @@
   gap: 5px;
   border-radius: 20px;
   padding: 5rem;
-
 }
 
 .SecondSession>h3 {
   font-size: 36px;
   font-weight: 700;
   line-height: 43.2px;
+  color: var(--second-blue);
 }
 
 .SecondSession>p {
+  color: var(--first-blue);
   font-size: 32px;
   font-weight: 400;
   line-height: 38.4px;
-  text-align: left;
+ 
 
 }
 
@@ -77,14 +73,12 @@
 
 .inputs {
   display: flex;
-  gap: 5rem;
-  padding: 15px 50px 15px 50px;
-  gap: 50px;
+  gap: 1rem;
+  padding: 10px 10px 10px 10px;
   border-radius: 25px;
-  border: 2px solid var(--second-blue);
+  border: 2px solid var(--first-blue);
   font-size: 24px;
   font-weight: 400;
-  line-height: 30px;
 }
 
 .inputs>input {
@@ -94,21 +88,23 @@
 }
 
 .inputs>input::placeholder {
-  color: var(--second-blue);
+  color: var(--first-blue);
   font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-
-
+  font-weight: 500;
+  /* line-height: 30px; */
 }
 
 .inputs>input:focus::-webkit-input-placeholder {
   opacity: 0.5;
 }
 
+.icon{
+  color: var(--first-blue);
+}
+
 
 .enterBtn {
-  background-color: var(--second-blue);
+  background-color: var(--first-blue);
   color: var(--white);
   display: flex;
   align-items: center;
@@ -117,5 +113,68 @@
   border-radius: 25px;
   border: none;
   font-size: 20px;
+
+}
+
+@media (max-width: 1025px){
+  .header{
+    width: 100%;
+    height: 95px;
+  }
+
+  .logo{
+    height: 100px;
+    width: 100px;
+  }
+
+  .sessions{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    
+  }
+
+  .firstSession {
+    align-items: center;
+    gap: 2px;
+  }
+
+  .firstSession > h1{
+    font-size: 35px;
+  }
+  .firstSession > p{
+    font-size: 28px;
+  }
+
+  .welcomeImage{
+    display: none;
+  }
+
+  .SecondSession{
+    margin-top: 5rem;
+    width: 100%;
+    height: 61vh;
+    padding: 3rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .SecondSession > h3{
+    font-size: 30px;
+  }
+  .SecondSession > p{
+    font-size: 25px;
+  }
+
+  .inputs>input{
+    font-size: 15px;
+  } 
+
+  .form{
+  gap: 2rem;
+  }
 
 }
