@@ -3,6 +3,7 @@
 import styled from "@/styles/allStyles/header.module.css";
 import { LOGO } from "@/utils/logos";
 import { SignOut } from "@phosphor-icons/react";
+import { signOut } from "next-auth/react";
 import Image from "next/image";
 
 export function HeaderPage() {
@@ -15,7 +16,7 @@ export function HeaderPage() {
       </div>
       <div className={styled.sairBtn}>
         <SignOut size={35} color="#ffffff" />
-        <button type="button">Sair</button>
+        <button type="button" onClick={() => signOut()}>Sair</button>
       </div>
     </main>
   );

@@ -1,8 +1,8 @@
 "use client";
 
 import styled from "@/styles/allStyles/nextInvoice.module.css";
-import { ItenCard } from "../itenCard/ItenCard";
-import { Card } from "../card/Card";
+import { ItenCard } from "../../itenCard/ItenCard";
+import { MainCards } from "../../card/MainCards";
 
 const styledItenCard = {
   backgroundColor: "var(--danger-10)",
@@ -12,7 +12,7 @@ const styledItenCard = {
 export function NextInvoice() {
   return (
     <main className={styled.container}>
-      <Card title="Próxima fatura" subtitle="Vence dia 20 de junho">
+      <MainCards title="Próxima fatura" subtitle="Vence dia 20 de junho">
         <section className={styled.section} style={styledItenCard}>
           <ItenCard title="Valor Total" valueDecimal={225.11} />
         </section>
@@ -22,7 +22,7 @@ export function NextInvoice() {
           <span className={styled.separator}></span>
           <button type="button">Abrir 2° via da fatura</button>
         </div>
-      </Card>
+      </MainCards>
     </main>
   );
 }

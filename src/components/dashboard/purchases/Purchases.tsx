@@ -2,7 +2,7 @@
 
 import styled from "@/styles/allStyles/purchases/purchases.module.css";
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { Card } from "../card/Card";
+import { MainCards } from "../card/MainCards";
 import { Graphic } from "./graphic/Graphic";
 import { TablePurchases } from "./tablePurchases/TablePurchases";
 
@@ -13,7 +13,7 @@ const styledItenCard = {
 export function Purchases() {
   return (
     <main className={styled.container} style={styledItenCard}>
-      <Card title="Compras" subtitle="por Postos Mirian">
+      <MainCards title="Compras" subtitle="por Postos Mirian">
         <div className={styled.search}>
           <input type="text" placeholder="Pesquise aqui " />
 
@@ -25,7 +25,7 @@ export function Purchases() {
           <Graphic />
           <TablePurchases />
         </div>
-      </Card>
+      </MainCards>
     </main>
   );
 }

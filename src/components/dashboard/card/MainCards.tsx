@@ -7,7 +7,7 @@ interface CardProps {
   children: any;
 }
 
-export function Card({ title, subtitle, children }: CardProps) {
+export function MainCards({ title, subtitle, children }: CardProps) {
   return (
     <main className={styled.container}>
       <div className={styled.content}>

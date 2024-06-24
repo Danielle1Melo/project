@@ -1,18 +1,25 @@
-"use client";
+"use client"
 import styled from "@/styles/allStyles/lastestPurchases.module.css";
 import { ItenCard } from "../itenCard/ItenCard";
-import { Card } from "../card/Card";
+import { MainCards } from "../card/MainCards";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
 const styledItenCard = {
   backgroundColor: "var(--yellow-10)",
 };
 
-export function LatestPurchases() {
-  return (
-    <main className={styled.container}>
-      <h1>Olá, João!</h1>
+export async function LatestPurchases() {
+  const session = await getServerSession();
 
-      <Card title="Últimas compras" subtitle="">
+  if(!session){
+    redirect("/");
+  }
+  return ( 
+    <main className={styled.container}>
+      <h1>Olá, {session?.user?.name}!</h1>
+
+      <MainCards title="Últimas compras" subtitle="">
         <div className={styled.sections}>
           <section style={styledItenCard}>
             <ItenCard title="Posto Mirian 02" valueDecimal={625.5} />
@@ -24,7 +31,7 @@ export function LatestPurchases() {
             <ItenCard title="Posto Mirian 02" valueDecimal={625.5} />
           </section>
         </div>
-      </Card>
+      </MainCards>
     </main>
   );
 }

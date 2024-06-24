@@ -1,6 +1,6 @@
 import { LatestPurchases } from "@/components/dashboard/latestPurchases/LatestPurchases";
 import { HeaderPage } from "@/components/header/Header";
-import { NextInvoice } from "@/components/dashboard/nextInvoice/NextInvoice";
+import { NextInvoice } from "@/components/dashboard/sessionCards/components/NextInvoice";
 import { Purchases } from "@/components/dashboard/purchases/Purchases";
 import styled from "@/styles/allStyles/userPage.module.css";
 
