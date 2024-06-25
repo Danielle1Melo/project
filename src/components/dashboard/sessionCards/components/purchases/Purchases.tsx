@@ -2,7 +2,7 @@
 
 import styled from "@/styles/allStyles/purchases/purchases.module.css";
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { MainCards } from "../card/MainCards";
+import { MainCards } from "../../../card/MainCards";
 import { Graphic } from "./graphic/Graphic";
 import { TablePurchases } from "./tablePurchases/TablePurchases";
 

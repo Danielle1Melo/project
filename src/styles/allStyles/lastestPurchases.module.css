@@ -19,4 +19,23 @@
     padding: 46px;
     border-radius: 20px;
     background-color: var(--yellow-10);
+    transition: all 0.3s;
+}
+
+.sections>section:hover{
+    transition: all 0.3s;
+    -webkit-box-shadow: 0px 2px 35px var(--yellow);
+    -moz-box-shadow: 0px 2px 35px var(--yellow);
+    box-shadow: 0px 2px 35px var(--yellow);
+}
+
+  
+@media (max-width: 1025px){
+    .sections{
+        flex-direction: column;
+    }
+
+    .sections>section{
+        padding: 40px;
+    }
 }

@@ -1,17 +1,17 @@
-import { LatestPurchases } from "../latestPurchases/LatestPurchases";
-import { NextInvoice } from "../sessionCards/components/NextInvoice";
-import { Purchases } from "../purchases/Purchases";
+import { LatestPurchases } from "../sessionCards/components/sessionInvoices/LatestPurchases";
+import { NextInvoice } from "../sessionCards/components/sessionInvoices/NextInvoice";
+import { Purchases } from "../sessionCards/components/purchases/Purchases";
 
-export function SessionUserPage(){
-    return (
-        <div>
-            <div>
-                <LatestPurchases />
+export function SessionUserPage() {
+  return (
+    <div>
+      <div>
+        <LatestPurchases />
 
-                <NextInvoice />
-            </div>
+        <NextInvoice />
+      </div>
 
-            <Purchases />
-        </div>
-    )
+      <Purchases />
+    </div>
+  );
 }

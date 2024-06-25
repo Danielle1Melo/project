@@ -1,4 +1,4 @@
-.container {
+/* .container {
     padding: 0 3rem;
     margin: 3rem 12rem;
 }
@@ -10,10 +10,10 @@
     box-shadow: 4px 4px 50px 4px #00000026;
 
 
-}
+} */
 
 .content>h3 {
-    color: var(--first-blue);
+    color: var(--second-blue);
     font-size: 28px;
     font-weight: 700;
     line-height: 20px;
@@ -23,5 +23,6 @@
 .content>p {
     font-size: 18.5px;
     font-weight: 400;
+    color: var(--second-blue);
 }
 

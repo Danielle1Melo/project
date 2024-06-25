@@ -1,14 +1,9 @@
-.container {
-    margin-top: 8rem;
-}
-
 
 .search {
     display: flex;
     gap: 9rem;
     margin-top: 25px;
     border-bottom: solid 1px var(--gray-10);
-
 }
 
 .search>input {

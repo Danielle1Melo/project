@@ -1,0 +1,54 @@
+
+.sessionCard {
+    padding: 2.9375rem 2.625rem;
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 4px 4px 50px 4px #00000026;
+ 
+    margin-bottom: 4rem;
+    transition: all 0.3s;
+  }
+
+
+  .sessionCardPurchases{
+    margin-top: 8rem;
+    padding: 1.9375rem 2.625rem;
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 4px 4px 50px 4px #00000026;
+    transition: all 0.3s;
+  }
+
+  .sessionSpace>h1 {
+    padding: 1.9375rem 3.625rem;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--first-blue);
+    text-transform: capitalize;
+}
+
+.main{
+    margin: 3rem 4rem;
+}
+
+.main02{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  @media (max-width: 1025px){
+    .sessionSpace {
+        width: 100%;
+      }
+    .sessionCard {
+        padding: 2rem 1rem;
+        width: 100%;
+      }
+
+      .main {
+        padding: 0 2px;
+        margin: 3rem 0.5rem;
+      }
+  }

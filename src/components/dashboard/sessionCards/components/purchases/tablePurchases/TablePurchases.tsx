@@ -1,7 +1,7 @@
 "use client";
 
 import { priceFormatter } from "@/utils/formatteNumber";
-import styled from "../../../../styles/allStyles/purchases/table.module.css";
+import styled from "../../../../../../styles/allStyles/purchases/table.module.css";
 
 export function TablePurchases() {
   return (

@@ -1,10 +1,10 @@
 
-.content {
+/* .content {
     padding: 55px;
     border-radius: 20px;
     background-color: var(--white);
     box-shadow: 4px 4px 50px 4px #00000026;
-}
+} */
 
 .content>h3 {
     color: var(--first-blue);
@@ -27,6 +27,14 @@
     padding: 60px 0px 60px 0px;
     border-radius: 20px;
     background-color: var(--danger-10);
+    transition: all 0.3s;
+}
+
+.section:hover{
+    transition: all 0.3s;
+    -webkit-box-shadow: 0px 2px 35px var(--danger);
+    -moz-box-shadow: 0px 2px 35px var(--danger);
+    box-shadow: 0px 2px 35px var(--danger);
 }
 
 .section>p {
@@ -55,16 +63,44 @@
 
 .details>button {
     margin-top: 10px;
-    color: var(--gray);
+    color: var(--second-blue);
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     border: none !important;
     background-color: transparent !important;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.details>button:hover{
+    color: var(--gray);
+    transition: all 0.4s;
 }
 
 .separator {
     border-left: solid 1px var(--gray-10);
     height: 25px;
     margin-top: 10px;
+}
+
+  
+@media (max-width: 1025px){
+    .details{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .details>button {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .separator{
+        display: none;
+    }
+
+    .section{
+        padding: 40px;
+    }
 }

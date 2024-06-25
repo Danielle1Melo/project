@@ -4,17 +4,17 @@
     gap: 12px;
 }
 
+
+
 .card>p {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    color: var(--gray);
+    color: var(--second-blue);
     font-size: 17px;
     font-weight: 400;
     text-transform: capitalize;
-
-
 }
 
 .card>h3 {
@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     color: var(--numbers);
-    font-size: 27px;
+    font-size: 29px;
     font-weight: 700;
     text-transform: capitalize;
 }
