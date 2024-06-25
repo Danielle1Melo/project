@@ -7,13 +7,11 @@
     justify-content: space-between;
 }
 
-
 .menuItens {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 53px;
-   
 }
 
 
@@ -47,7 +45,28 @@
     padding: 0px 82px 0px 0px;
 }
 
+.menuIcon{
+    display: none;
+}
 
 @media (max-width: 1025px) {
+    .container{
+        width: 100%;
+        padding: 15px 15px;;
+        
+    }
+    .menuItens, .sairBtn{
+        display:  none;
+    }
+
+    .menuIcon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .logo{
+        width: 100px;
+        height: 100px;
+      }
 
 }

@@ -1,7 +1,7 @@
 "use client";
 import styled from "@/styles/allStyles/lastestPurchases.module.css";
-import { ItenCard } from "../../../itenCard/ItenCard";
-import { MainCards } from "../../../card/MainCards";
+import { ItenCard } from "../../itenCard/ItenCard";
+import { MainCards } from "../../card/MainCards";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 

@@ -1,0 +1,121 @@
+.container{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 20%;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    background-color: var(--first-blue);
+}
+
+.containerClosed{
+    width: -100%;
+    backdrop-filter: blur(30px) ;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+ 
+    transition: transform 0.5s ease-in;
+    transform: translateX(-100%)
+    
+}
+
+
+.contianerItens{
+    width: 100%;
+   
+}
+
+
+
+.navBar{
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2.5rem;
+}
+
+.buttonLogoutSession{
+      text-decoration: none;
+        border: none;
+        color: var(--danger);
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        width: 100%;
+        height: 3.5rem;
+        text-transform: capitalize;
+        transition: all 0.4s;
+        border-radius: 5px;
+        padding: 0 1rem;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1.15rem;
+}
+
+.buttonLogoutSession:hover{
+    background-color: var(--danger);
+        transition: all 0.4s;
+        color: var(--white);
+}
+
+
+.header{
+    display: flex;
+    border-bottom: solid 1px var(--base-bg-card-opacity-02);
+    padding-bottom: 1rem;
+    gap: 2rem;
+
+    margin: 2rem 0;
+
+}
+
+.nameProject > strong{
+    font-size: 1.5rem;
+}
+
+.header > p{
+    cursor: pointer;
+    font-size: 1.25;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--base-text);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-transform: capitalize;
+    transition: all 0.4s;
+    cursor: pointer;
+     font-weight: 700;
+    font-size: 1.15rem;
+
+
+}
+
+
+
+
+.link:hover{
+    transition: all 0.4s;
+    color: var(--base-border-01);
+    fill: var(--base-border-01);
+    stroke: var(--base-border-01);
+}
+
+
+@media (min-width: 1025px) {
+    .containerClosed{
+        display: none;
+    }
+
+    .container{
+        display: none;
+    }
+   }

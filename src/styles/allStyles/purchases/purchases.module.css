@@ -1,6 +1,13 @@
+/* .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 
 .search {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 9rem;
     margin-top: 25px;
     border-bottom: solid 1px var(--gray-10);
@@ -34,4 +41,17 @@
   .IconButton:disabled{
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+.graphic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1025px){
+    .search{
+        width: 100%;
+        gap: 6rem;
+    }
 }

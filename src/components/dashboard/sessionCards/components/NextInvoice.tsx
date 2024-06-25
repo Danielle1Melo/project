@@ -1,8 +1,8 @@
 "use client";
 
 import styled from "@/styles/allStyles/nextInvoice.module.css";
-import { ItenCard } from "../../../itenCard/ItenCard";
-import { MainCards } from "../../../card/MainCards";
+import { ItenCard } from "../../itenCard/ItenCard";
+import { MainCards } from "../../card/MainCards";
 
 const styledItenCard = {
   backgroundColor: "var(--danger-10)",

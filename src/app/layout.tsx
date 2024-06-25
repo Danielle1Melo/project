@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
+import StatusMenuContextComponent from "@/context/contextSidebar/StatusMenu";
 
 const myFont = localFont({
   src: "../assets/font/Kollektif.woff2",
@@ -18,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={myFont.className}>{children}</body>
+    <html lang="pt-BR">
+      <StatusMenuContextComponent>
+        <body className={myFont.className}>{children}</body>
+      </StatusMenuContextComponent>
     </html>
   );
 }

@@ -1,54 +1,55 @@
-
 .sessionCard {
-    padding: 2.9375rem 2.625rem;
-    border-radius: 20px;
-    background-color: var(--white);
-    box-shadow: 4px 4px 50px 4px #00000026;
- 
-    margin-bottom: 4rem;
-    transition: all 0.3s;
-  }
+  padding: 2.9375rem 2.625rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 50px 4px #00000026;
 
-
-  .sessionCardPurchases{
-    margin-top: 8rem;
-    padding: 1.9375rem 2.625rem;
-    border-radius: 20px;
-    background-color: var(--white);
-    box-shadow: 4px 4px 50px 4px #00000026;
-    transition: all 0.3s;
-  }
-
-  .sessionSpace>h1 {
-    padding: 1.9375rem 3.625rem;
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--first-blue);
-    text-transform: capitalize;
+  margin-bottom: 4rem;
 }
 
-.main{
-    margin: 3rem 4rem;
+.sessionCardPurchases {
+  padding: 2.9375rem 2.625rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 50px 4px #00000026;
+  margin-top: 4rem;
 }
 
-.main02{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.cards > h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--first-blue);
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.main {
+  margin: 3rem 4rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1025px) {
+  .sessionSpace {
     width: 100%;
   }
-  
-  @media (max-width: 1025px){
-    .sessionSpace {
-        width: 100%;
-      }
-    .sessionCard {
-        padding: 2rem 1rem;
-        width: 100%;
-      }
-
-      .main {
-        padding: 0 2px;
-        margin: 3rem 0.5rem;
-      }
+  .sessionCard,
+  .cards {
+    margin-bottom: 2rem;
+    width: 100%;
   }
+
+  .sessionCardPurchases {
+    width: 100%;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .main {
+    padding: 0 2px;
+    margin: 3rem 0.5rem;
+  }
+
+
+}

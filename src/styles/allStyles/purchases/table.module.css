@@ -6,6 +6,7 @@
     padding: 0px 0px 0px 50px;
     color: var(--second-blue);
 
+
 }
 
 .table thead th {
@@ -31,4 +32,11 @@
     height: 10px;
     border-radius: 50%;
     background-color: aqua;
+  }
+
+  @media (max-width: 1025px){
+    .table{
+      padding: 0px;
+      width: 100%;
+    }
   }
