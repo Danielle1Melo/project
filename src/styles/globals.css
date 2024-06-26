@@ -18,8 +18,10 @@
   --gray-10: #06233D1A;
   --numbers: #12162B;
   --search: #ACB1C6;
-
+  --background: #E7E7E7;
+  --backgroud-danger: #ad121254;
   --first-blue-blur: #005baad5;
+  --backgroud-icon: #005baa42;
 }
 
 * {
@@ -29,7 +31,7 @@
 }
 
 body{
-  background-color: var(--white-50);
+  background-color: var(--background);
 }
 
   

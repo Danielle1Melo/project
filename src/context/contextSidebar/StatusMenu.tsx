@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ReactNode, createContext, useState } from "react"
 import { StatusMenuContextProps } from "./@types"

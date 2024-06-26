@@ -23,6 +23,12 @@
 }
 
 
+.blur{
+    height: 65%;
+    backdrop-filter: blur(15px);
+}
+
+
 
 .menuItens > button,.sairBtn>button {
     text-decoration: none;

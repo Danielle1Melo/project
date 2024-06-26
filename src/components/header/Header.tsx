@@ -13,7 +13,7 @@ export function HeaderPage() {
 
   return (
     <>
-      <div style={{ height: "100%" }}>
+      <div style={!statusMenu ? { height: "100%" }: { height: "0" }}>
         <SideBar />
       </div>
       <main className={styled.container}>

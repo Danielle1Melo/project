@@ -1,0 +1,32 @@
+.selectContainer {
+    width: auto;
+    height: 2rem;
+    
+    border-radius: 8px;
+    padding: 0 1rem;
+    border: solid 1px var(--first-blue);
+    text-transform: capitalize;
+    color: var(--numbers);
+    text-transform: capitalize;
+  }
+  
+  .selectContainer:focus {
+    outline: solid 1px var(--base-border-01);
+  }
+  
+  .selectContainer > option {
+    color: var(--base-text);
+    text-transform: capitalize;
+  }
+  
+  .selectContainer option:hover {
+    color: var(--base-text);
+    background: var(--base-border-01);
+  }
+  
+  @media (max-width: 1025px) {
+  
+    .selectContainer {
+      width: 100%;
+    }
+  }

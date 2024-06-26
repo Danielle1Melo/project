@@ -1,5 +1,5 @@
 "use client";
-import styled from "@/styles/allStyles/lastestPurchases.module.css";
+import styled from "@/styles/allStyles/sessionCards/lastestPurchases.module.css";
 import { ItenCard } from "../../itenCard/ItenCard";
 import { MainCards } from "../../card/MainCards";
 import { getServerSession } from "next-auth";
@@ -15,7 +15,7 @@ export function LatestPurchases() {
   // if(!session){
   //   redirect("/");
   // }
-  return (
+  return (      
     <main className={styled.container}>
       <MainCards title="Últimas compras" subtitle="">
         <div className={styled.sections}>

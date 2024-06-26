@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem ;
+    margin-top: 5rem;
+}
+
+.card{
+    padding: 2.9375rem 12.625rem;
+    /* background-color: var(--background);
+    border: 5px solid var(--backgroud-icon); */
+    border-radius: 20px;
+}

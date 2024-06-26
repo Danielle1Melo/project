@@ -5,6 +5,7 @@ import { MagnifyingGlass } from "@phosphor-icons/react";
 import { MainCards } from "../../../card/MainCards";
 import { Graphic } from "./graphic/Graphic";
 import { TablePurchases } from "./tablePurchases/TablePurchases";
+import { SelectConta } from "../SelectConta";
 
 const styledItenCard = {
   color: "var(--gray)",
@@ -13,6 +14,7 @@ const styledItenCard = {
 export function Purchases() {
   return (
     <main className={styled.container} style={styledItenCard}>
+      
       <MainCards title="Compras" subtitle="por Postos Mirian">
         <div className={styled.search}>
           <input type="text" placeholder="Pesquise aqui " />

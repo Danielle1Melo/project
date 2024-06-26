@@ -1,0 +1,15 @@
+.title {
+  display: flex;
+  justify-content: space-around;
+  color: var(--second-blue);
+}
+
+.title > .icon{
+    /* background-color: var(--backgroud-icon); */
+    border-radius: 50px;
+
+}
+
+.title > p {
+  font-size: 14px;
+}
