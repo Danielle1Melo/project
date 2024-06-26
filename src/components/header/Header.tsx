@@ -12,10 +12,12 @@ export function HeaderPage() {
   const { activeMenu, statusMenu } = useStatusMenuContext();
 
   return (
-    <main
-      className={styled.container}
-    >
-      <Image src={LOGO.I9on} alt=""  className={styled.logo}/>
+    <>
+      <div style={{ height: "100%" }}>
+        <SideBar />
+      </div>
+      <main className={styled.container}>
+        <Image src={LOGO.I9on} alt="" className={styled.logo} />
 
         <div className={styled.menuItens}>
           <button>Início</button>
@@ -28,11 +30,13 @@ export function HeaderPage() {
           </button>
         </div>
 
-        <List size={35} color="#ffffff" className={styled.menuIcon} onClick={() => activeMenu()}/>
-      <div style={{height: '100%'}}>
-        <SideBar />
-      </div>
-   
-    </main>
+        <List
+          size={35}
+          color="#ffffff"
+          className={styled.menuIcon}
+          onClick={() => activeMenu()}
+        />
+      </main>
+    </>
   );
 }
