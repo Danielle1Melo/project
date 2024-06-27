@@ -1,7 +1,8 @@
 "use client";
 
 import { CardFatura } from "../../cardFatura/CardFatura";
-import { CurrencyDollarSimple, Spinner } from "@phosphor-icons/react";
+import { CurrencyDollarSimple } from "@phosphor-icons/react";
+import styled from "../../../../styles/allStyles/faturaPage/cardFatura.module.css";
 
 const styledItenCard = {
   backgroundColor: "var(--background)",
@@ -11,12 +12,16 @@ const styledItenCard = {
 
 export function Paid() {
   return (
-    <div style={styledItenCard}>
+    <div style={styledItenCard} className={styled.cardOpen}>
       <CardFatura
         title="PAGO"
-        icon={<CurrencyDollarSimple size={40} color="#003B6B" />}
-        valueDecimal={450}
+        valueDecimal={4500}
       />
+
+    <div className={styled.contentIconPaid}>
+        <CurrencyDollarSimple size={25} color="##003B6B" className={styled.openIcon}/> 
+        </div>
     </div>
+    
   );
 }

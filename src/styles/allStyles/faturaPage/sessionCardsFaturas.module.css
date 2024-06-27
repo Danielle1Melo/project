@@ -1,5 +1,7 @@
 .sessionSpace{
-    padding: 2.9375rem 2.625rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 11.8rem;
 }
 
 .main{
@@ -8,26 +10,37 @@
     justify-content: center;
 }
 
-
 .sessionCard {
     margin-top: 2rem;
-    padding: 2.9375rem 2.625rem;
+    /* padding: 2.9375rem 2.625rem; */
 
 }
 
-
+.sessionTop {
+    display:  flex;
+    justify-content: space-between;
+}
 
 .sessionTop> h1{
     font-size: 40px;
     font-weight: 700;
     color: var(--first-blue);
     text-transform: capitalize;
-    margin-bottom: 2rem;
+
 }
 
 
 @media (max-width: 1025px){
     .sessionSpace {
       width: 100%;
+      margin: 3rem 0.5rem;
+    }
+    .main{
+        width: 100%;
+        flex-direction: column;
+    }
+    .sessionTop{
+        width: 100%;
+       justify-content: space-around;
     }
   }

@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.selectContainer {
+    width: auto;
+    height: 2rem;
+    
+    border: none !important;
+    padding: 0 10px;
+    text-transform: capitalize;
+    color: var(--numbers);
+    text-transform: capitalize;
+    background-color: var(--background);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .selectContainer:focus {
+    outline: none;
+  }
+  
+
+  .selectContainer > option {
+    color: var(--numbers);
+    text-transform: capitalize;
+    background-color: var(--background);
+    border-radius: 10px;
+    border: none !important;
+  }
+  
+
+  @media (max-width: 1025px) {
+  
+    .selectContainer {
+      width: 100%;
+      padding: 1px;
+    }
+  }

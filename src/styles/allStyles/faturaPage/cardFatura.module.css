@@ -1,36 +1,72 @@
 .content{
-  margin: 2.5rem 12rem;
   display:  flex;
-}
-
-.content >.title {
-  display: flex;
+  padding: 2.9375rem 12.5rem 2.9375rem 1rem;
   flex-direction: column;
-
-  color: var(--second-blue);
-  gap: 25px;
+  gap: 15px;
 }
 
 
-/* .content >.icon{
-    background-color: var(--backgroud-icon);
-    border-radius: 50px;
-} */
 
-.content > .title > p {
-  font-size: 14px;
-  text-align: left;
+.content> p {
+  font-size: 16px;
+  
 }
 
-.title>h3{
+.content>h3{
   font-size: 24px;
   font-weight: 400;
   left: 10px;
   color: var(--text-table);
 }
 
+
+
 @media (max-width: 1025px){
-  .sessionSpace {
+  .content {
     width: 100%;
+    padding: 2.9375rem 2.625rem;
+    /* flex-direction: column; */
+    gap: 5px;
   }
+
 }
+
+/* -----------OPEN CARD------------ */
+.cardOpen{
+  display: flex;
+  justify-content: flex-end;
+  right: 8rem;
+}
+.contentIcon{
+  background-color: var(--gray-10);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 2rem;
+}
+.openIcon{
+  margin: 12px;
+}
+
+
+/* -----------PAID CARD------------ */
+
+.contentIconPaid{
+  background-color: var(--backgroud-icon);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 2rem;
+}
+
+/* -----------Vencido CARD------------ */
+
+.openIconVencido{
+  background-color: var(--backgroud-danger);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: 2rem;
+}
+
+
