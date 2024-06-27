@@ -4,7 +4,7 @@
     
     border-radius: 8px;
     padding: 0 1rem;
-    border: solid 1px var(--first-blue);
+    border: solid 2px var(--first-blue);
     text-transform: capitalize;
     color: var(--numbers);
     text-transform: capitalize;
@@ -15,15 +15,15 @@
   }
   
   .selectContainer > option {
-    color: var(--base-text);
+    color: var(--second-blue);
     text-transform: capitalize;
   }
-  
+/*   
   .selectContainer option:hover {
     color: var(--base-text);
     background: var(--base-border-01);
   }
-  
+   */
   @media (max-width: 1025px) {
   
     .selectContainer {

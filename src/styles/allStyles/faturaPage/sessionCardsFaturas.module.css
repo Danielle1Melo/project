@@ -1,14 +1,33 @@
-.container{
+.sessionSpace{
+    padding: 2.9375rem 2.625rem;
+}
+
+.main{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5rem ;
-    margin-top: 5rem;
 }
 
-.card{
-    padding: 2.9375rem 12.625rem;
-    /* background-color: var(--background);
-    border: 5px solid var(--backgroud-icon); */
-    border-radius: 20px;
+
+.sessionCard {
+    margin-top: 2rem;
+    padding: 2.9375rem 2.625rem;
+
 }
+
+
+
+.sessionTop> h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--first-blue);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 1025px){
+    .sessionSpace {
+      width: 100%;
+    }
+  }

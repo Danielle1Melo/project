@@ -28,6 +28,10 @@
     backdrop-filter: blur(15px);
 }
 
+.sidebar{
+    display: none;
+}
+
 
 
 .menuItens > button,.sairBtn>button {
@@ -59,6 +63,10 @@
 }
 
 @media (max-width: 1025px) {
+    .sidebar{
+        display: block;
+    }
+
     .container{
         width: 100%;
         padding: 15px 15px;;

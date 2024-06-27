@@ -7,25 +7,26 @@ import { List, SignOut } from "@phosphor-icons/react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
 import SideBar from "../sidebar/Sidebar";
-
+import { useRouter } from "next/navigation";
 export function HeaderPage() {
   const { activeMenu, statusMenu } = useStatusMenuContext();
+  const router = useRouter();
 
   return (
     <>
-      <div style={!statusMenu ? { height: "100%" }: { height: "0" }}>
+      <div style={{ height: "100%" }} className={styled.sidebar}>
         <SideBar />
       </div>
       <main className={styled.container}>
         <Image src={LOGO.I9on} alt="" className={styled.logo} />
 
         <div className={styled.menuItens}>
-          <button>Início</button>
-          <button>Fatura</button>
+          <button onClick={() => router.push("/mainPage")}>Início</button>
+          <button onClick={() => router.push("/faturas")}>Fatura</button>
         </div>
         <div className={styled.sairBtn}>
           <SignOut size={35} color="#ffffff" />
-          <button type="button" onClick={() => signOut()}>
+          <button type="button" onClick={() => signOut({ callbackUrl: "/" })}>
             Sair
           </button>
         </div>

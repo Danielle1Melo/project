@@ -6,15 +6,20 @@ import styled from "../../../styles/allStyles/faturaPage/sessionCardsFaturas.mod
 
 export function SessionCardsFaturas() {
   return (
-    <div className={styled.container}>
-      <div className={styled.card}>
-        <Paid />
+    <div className={styled.sessionSpace}>
+      <div className={styled.sessionTop}>
+        <h1>Faturas</h1>
       </div>
-      <div className={styled.card}>
-        <Vencido />
-      </div>
-      <div className={styled.card}>
-        <Open />
+      <div className={styled.main}>
+        <div className={styled.sessionCard}>
+          <Paid />
+        </div>
+        <div className={styled.sessionCard}>
+          <Vencido />
+        </div>
+        <div className={styled.sessionCard}>
+          <Open />
+        </div>
       </div>
     </div>
   );

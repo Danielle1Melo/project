@@ -10,16 +10,12 @@ interface CardFaturaProps {
 
 export function CardFatura({ title, icon, valueDecimal }: CardFaturaProps) {
   return (
-    
-      <div className={styled.content}>
-        <div className={styled.title}>
-          <p>{title}</p>
-          <div className={styled.icon}>{icon}</div>
-        </div>
-        <div  className={styled.children}>
+    <div className={styled.content}>
+      <div className={styled.title}>
+        <p>{title}</p>
         <h3>{priceFormatter.format(valueDecimal)}</h3>
-        </div>
       </div>
- 
+      <div className={styled.icon}>{icon}</div>
+    </div>
   );
 }

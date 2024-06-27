@@ -11,7 +11,7 @@ export default function AuthenticatedSession() {
   const router = useRouter();
 
   function login() {
-    router.push("/userPage");
+    router.push("/mainPage");
   }
   // const searchParams = useSearchParams();
   // const error = searchParams.get("error");

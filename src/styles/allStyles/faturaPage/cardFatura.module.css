@@ -1,15 +1,36 @@
-.title {
+.content{
+  margin: 2.5rem 12rem;
+  display:  flex;
+}
+
+.content >.title {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+
   color: var(--second-blue);
+  gap: 25px;
 }
 
-.title > .icon{
-    /* background-color: var(--backgroud-icon); */
+
+/* .content >.icon{
+    background-color: var(--backgroud-icon);
     border-radius: 50px;
+} */
 
+.content > .title > p {
+  font-size: 14px;
+  text-align: left;
 }
 
-.title > p {
-  font-size: 14px;
+.title>h3{
+  font-size: 24px;
+  font-weight: 400;
+  left: 10px;
+  color: var(--text-table);
+}
+
+@media (max-width: 1025px){
+  .sessionSpace {
+    width: 100%;
+  }
 }
