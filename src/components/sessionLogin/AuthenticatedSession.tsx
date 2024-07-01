@@ -49,7 +49,11 @@ export default function AuthenticatedSession() {
               <input type="password" placeholder="Senha" name="password" />
             </div>
 
-            <button className={styled.enterBtn} type="button">
+            <button
+              className={styled.enterBtn}
+              type="button"
+              onClick={() => router.push("/mainPage")}
+            >
               Entrar
             </button>
           </form>

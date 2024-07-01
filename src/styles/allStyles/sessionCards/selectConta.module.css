@@ -1,7 +1,7 @@
 .selectContainer {
     width: auto;
     height: 2rem;
-    
+    background-color: var(--background);
     border-radius: 8px;
     padding: 0 1rem;
     border: solid 2px var(--first-blue);

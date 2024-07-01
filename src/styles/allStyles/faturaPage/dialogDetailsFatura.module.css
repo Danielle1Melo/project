@@ -118,6 +118,40 @@
 
 .table tbody td:last-child{
     text-align: right;
+    
+}
+
+.totalContainer{
+
+  display: flex;
+    justify-content: end;
+ margin-top: 10px;
+  
+}
+
+.totalInformation{
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  background-color:  var(--gray-50);
+  border-radius: 30px;
+  padding: 20px 25px;
+}
+
+.totalInformation > p{
+  color: var(--font-status-aberto);
+  font-size: 20px;
+}
+
+.totalInformation > p > span{
+  font-size: 16px;
+  color: var(--gray);
+}
+
+.totalInformation > h3{
+  color: var(--text-fatura);
+  font-size: 20px;
 }
 
 .buttonsPaid{
@@ -125,7 +159,7 @@
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 .buttonsPaid > button{
@@ -137,6 +171,12 @@
     font-weight: 700;
     color: var(--text-fatura);
     cursor: pointer;
+    transition: all 0.4s;
+}
+
+.buttonsPaid > button:hover{
+  background-color: var(--gray-50);
+  transition: all 0.4s;
 }
 
   .iconButton{
@@ -166,6 +206,10 @@
       width: 100%;
       height: 100%;
       border-radius: 0;
+    }
+
+    .totalContainer{
+      width: 100%;
     }
 
   }

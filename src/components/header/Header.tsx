@@ -14,7 +14,7 @@ export function HeaderPage() {
 
   return (
     <>
-      <div style={{ height: "100%" }} className={styled.sidebar}>
+      <div className={styled.sidebar}>
         <SideBar />
       </div>
       <main className={styled.container}>
@@ -26,7 +26,7 @@ export function HeaderPage() {
         </div>
         <div className={styled.sairBtn}>
           <SignOut size={35} color="#ffffff" />
-          <button type="button" onClick={() => signOut({ callbackUrl: "/" })}>
+          <button type="button" onClick={() => router.push("/")}>
             Sair
           </button>
         </div>

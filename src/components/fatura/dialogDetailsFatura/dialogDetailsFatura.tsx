@@ -12,24 +12,29 @@ const itensTable = [
   {
     id: 1,
     description: "Descrição Item I",
-    value: 1240.0,
+    value: 1240,
   },
   {
     id: 2,
     description: "Descrição Item 2",
-    value: 1240.0,
+    value: 1240,
   },
   {
     id: 3,
     description: "Descrição Item 3",
-    value: 1240.0,
+    value: 1240,
   },
   {
     id: 4,
     description: "Descrição Item 4",
-    value: 1240.0,
+    value: 1240,
   },
 ];
+
+const totalValue = itensTable.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.value,
+  0
+);
 
 export function DialogDetailsFatura({
   openDialog,
@@ -46,9 +51,9 @@ export function DialogDetailsFatura({
           <Dialog.Title></Dialog.Title>
           <section className={styled.section}>
             <div>
-            <h3>Fatura Semana 1</h3>
+              <h3>Fatura Semana 1</h3>
             </div>
-            
+
             <div className={styled.sectionClient}>
               <div className={styled.client}>
                 <p>Cliente</p>
@@ -85,6 +90,15 @@ export function DialogDetailsFatura({
               </tbody>
             </table>
 
+            <div className={styled.totalContainer}>
+              <div className={styled.totalInformation}>
+                <p>
+                  Total <span>(BR)</span>
+                </p>
+                <h3>{priceFormatter.format(totalValue)}</h3>
+              </div>
+            </div>
+
             <div className={styled.buttonsPaid}>
               <button>Pagar via PIX - QR Code</button>
               <button>Gerar boleto de pagamento</button>
@@ -92,8 +106,8 @@ export function DialogDetailsFatura({
           </main>
 
           <button onClick={closedDialog} className={styled.iconButton}>
-              <X size={35}/>
-            </button>
+            <X size={35} />
+          </button>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
