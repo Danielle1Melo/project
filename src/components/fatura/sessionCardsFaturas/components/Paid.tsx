@@ -6,22 +6,22 @@ import styled from "../../../../styles/allStyles/faturaPage/cardFatura.module.cs
 
 const styledItenCard = {
   backgroundColor: "var(--background)",
-  border: "5px solid var(--backgroud-icon)",
+  border: "3px solid var(--backgroud-icon)",
   borderRadius: "20px",
 };
 
 export function Paid() {
   return (
     <div style={styledItenCard} className={styled.cardOpen}>
-      <CardFatura
-        title="PAGO"
-        valueDecimal={4500}
-      />
+      <CardFatura title="PAGO" valueDecimal={4500} />
 
-    <div className={styled.contentIconPaid}>
-        <CurrencyDollarSimple size={25} color="##003B6B" className={styled.openIcon}/> 
-        </div>
+      <div className={styled.contentIconPaid}>
+        <CurrencyDollarSimple
+          size={25}
+          color="##003B6B"
+          className={styled.openIcon}
+        />
+      </div>
     </div>
-    
   );
 }

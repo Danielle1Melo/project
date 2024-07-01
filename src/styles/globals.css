@@ -19,9 +19,12 @@
   --numbers: #12162B;
   --search: #ACB1C6;
   --background: #E7E7E7;
-  --backgroud-danger: #ad121260;
+  --backgroud-danger: #bd20203d;
   --first-blue-blur: #005baad5;
   --backgroud-icon: #005baa42;
+  --background-table: #F3F3F3;
+  --font-status-aberto: #4E4E4E;
+
 }
 
 * {

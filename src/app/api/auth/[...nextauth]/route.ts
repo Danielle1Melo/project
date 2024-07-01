@@ -1,40 +1,39 @@
-// import NextAuth from "next-auth";
-// import CredentialsProvider from "next-auth/providers/credentials";
-// import { signIn, signOut } from "next-auth/react";
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import { signIn, signOut } from "next-auth/react";
 
-// const handler = NextAuth({
-//   pages: {
-//     signIn: "/",
-//     signOut: "/",
-//   },
-//   providers: [
-//     CredentialsProvider({
-//       name: "Credentials",
+export const handler = NextAuth({
+  pages: {
+    signIn: "/",
+    signOut: "/",
+  },
+  providers: [
+    CredentialsProvider({
+      name: "Credentials",
 
-//       credentials: {
-//         email: { label: "Email", type: "email" },
-//         password: { label: "Password", type: "password" },
-//       },
-//       async authorize(credentials) {
-//         if (!credentials) {
-//           return null;
-//         }
+      credentials: {
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_AUTHENTICATED}/api/v1/auth/login`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(credentials),
+          }
+        );
+        const user = await res.json();
 
-//         if (
-//           credentials.email === "danielleesilva.4@gmail.com" &&
-//           credentials.password === "123"
-//         ) {
-//           return {
-//             id: "1",
-//             name: "Danielle",
-//             email: "danielleesilva.4@gmail.com",
-//           };
-//         }
+        if (res.ok && user) {
+          return user;
+        }
 
-//         return null;
-//       },
-//     }),
-//   ],
-// });
-
-// export { handler as GET, handler as POST };
+        return null;
+      },
+    }),
+  ],
+});

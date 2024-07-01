@@ -1,24 +1,28 @@
 .sessionSpace{
     display: flex;
     flex-direction: column;
-    margin: 3rem 11.8rem;
 }
 
 .main{
+    margin: 3rem 18rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.main01{
+    display: flex;
+    justify-content: space-between;
 }
 
 .sessionCard {
     margin-top: 2rem;
-    /* padding: 2.9375rem 2.625rem; */
-
+    display: flex; 
 }
 
 .sessionTop {
     display:  flex;
     justify-content: space-between;
+
 }
 
 .sessionTop> h1{
@@ -31,16 +35,26 @@
 
 
 @media (max-width: 1025px){
-    .sessionSpace {
+    .sessionSpace{
       width: 100%;
-      margin: 3rem 0.5rem;
+     
     }
     .main{
-        width: 100%;
+        
+        margin: 3rem 0.5rem;
+ 
+    }
+
+    .main01{
         flex-direction: column;
     }
-    .sessionTop{
+
+    .sessionCard{
         width: 100%;
-       justify-content: space-around;
     }
+
+    .sessionCard{
+        display: block;
+    }
+
   }

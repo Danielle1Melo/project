@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
 import StatusMenuContextComponent from "@/context/contextSidebar/StatusMenu";
+import ProviderAuth from "@/components/ProviderAuth/ProviderAuth";
 
 const myFont = localFont({
   src: "../assets/font/Kollektif.woff2",
@@ -20,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <StatusMenuContextComponent>
-        <body className={myFont.className}>{children}</body>
-      </StatusMenuContextComponent>
+      <ProviderAuth>
+        <StatusMenuContextComponent>
+          <body className={myFont.className}>{children}</body>
+        </StatusMenuContextComponent>
+      </ProviderAuth>
     </html>
   );
 }
