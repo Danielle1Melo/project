@@ -17,14 +17,14 @@
 
 }
 
+
+
 .container>.table thead th {
     font-size: 14px;
     font-weight: 700;
     padding: 0.95rem 0.5rem;
     text-align: left;
     background-color: var(--background-table);
-    
-
 }
 
 .table thead th:first-child {
@@ -48,7 +48,7 @@
     border-bottom: solid 1px var(--gray-10);
 }
 
-.iconDetails {
+.iconDetails, .iconDetailsExport {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,31 +60,112 @@
     cursor: pointer;
 }
 
-.statusBtn{
+.styleStatusPago{
     border: none;
+    background-color: var(--backgroud-icon);
+    border-radius: 20px;
+    padding: 5px 25px;
+    color: var(--second-blue);
+    font-weight: 600;
+}
 
+.styleStatusVencido{
+    border: none;
+    background-color: var(--backgroud-danger);
+    border-radius: 20px;
+    padding: 5px 25px;
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.styleStatusAberto{
+    border: none;
+    background-color: var(--background-table);
+    border-radius: 20px;
+    padding: 5px 25px;
+    color: var(--font-status-aberto);
+    font-weight: 600;
+}
+
+.contentTitles{
+    display: flex;
+    justify-content: space-between;
 }
 
 .titles{
     display: flex;
     gap: 2rem;
     font-size: 18px;
-    line-height: 19px;
+    line-height: 29px;
+    border-bottom: solid 1px var(--gray-10);
+    width: 450px;
 }
+
+.filtroBtn{
+    border: 1px solid #171717;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+    background-color: var(--white );
+    cursor: pointer;
+}
+
 
 /* .table tbody tr:hover {
     background-color: var(--background-table);
     border-radius: 10px;
-} */
+} */ 
 
 
 @media (max-width: 1025px) {
+    .container{
+        padding: 2.9375rem 2rem;
+    }
+
+
     .table {
         padding: 0px;
         width: 100%;
     }
 
-    .statusBtn{
+
+    .styleStatusPago, .styleStatusAberto, .styleStatusVencido{
+        background-color: var(--white);
+        padding: 1px;
+    }
+
+    .titles{
         width: 100%;
     }
+    
+    .container>.table thead th{
+        padding: 0.95rem 0.1rem;
+    }
+
+    .table tbody td{
+        font-size: 12px;
+    
+    }
+
+    .contentTitles{
+        flex-direction: column;
+    }
+
+    .filtroBtn{
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .iconDetailsExport, .container>.table thead th:last-child{
+        display: none;
+    }
+    .container>.table thead th:nth-last-child(2){
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
 }

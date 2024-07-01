@@ -1,7 +1,16 @@
-import { CaretRight, DiceFive } from "@phosphor-icons/react";
+import {
+  CaretRight,
+
+  DownloadSimple,
+  FunnelSimple,
+} from "@phosphor-icons/react";
 import styled from "../../../../../styles/allStyles/faturaPage/tableFatura.module.css";
 import { priceFormatter } from "@/utils/formatteNumber";
 import { useRouter } from "next/navigation";
+
+import React, { useState } from "react";
+import {DialogDetailsFatura} from "@/components/fatura/dialogDetailsFatura/dialogDetailsFatura"
+import { it } from "node:test";
 
 const itensTable = [
   {
@@ -34,83 +43,97 @@ const itensTable = [
   },
 ];
 
-const styleStatusPago = {
-  backgroundColor: "var(--backgroud-icon)",
-  borderRadius: "20px",
-  padding: "5px 25px",
-  color: "var(--second-blue)",
-};
-
-const styleStatusVencido = {
-  backgroundColor: "var(--backgroud-danger)",
-  borderRadius: "20px",
-  padding: "5px 25px",
-  color: "var(--danger)",
-};
-
-const styleStatusAberto = {
-  backgroundColor: "var(--background-table)",
-  borderRadius: "20px",
-  padding: "5px 25px",
-  color: "var(--font-status-aberto)",
-};
-
 export function TableFatura() {
+  const [openDialogDetailsFatura, setOpenDialogDetailsFatura] = useState(false);
   const router = useRouter();
 
-  return (
-    <div className={styled.container}>
-      <div className={styled.titles}>
-        <p>Todas as faturas</p>
-        <p>Pago</p>
-        <p>Vencido</p>
-        <p>Em aberto</p>
-      </div>
-      <table className={styled.table}>
-        <thead>
-          <tr>
-            <th>Descrição</th>
-            <th>Vencimento</th>
-            <th>Valor</th>
-            <th>Status</th>
-            <th>Detalhes</th>
-          </tr>
-        </thead>
+  function handleCloseDialogDetailsFatura() {
+    setOpenDialogDetailsFatura(false);
+    console.log("closed")
+  }
 
-        <tbody>
-          {itensTable.map((item) => {
-            return (
-              <tr key={item.id}>
-                <td>{item.description}</td>
-                <td>{item.vencimento}</td>
-                <td>{item.value}</td>
-                <td>
-                  <button
-                    className={styled.statusBtn}
-                    style={
-                      item.status === "PAGO"
-                        ? styleStatusPago
-                        : item.status === "EM ABERTO"
-                        ? styleStatusAberto
-                        : styleStatusVencido
-                    }
-                  >
-                    {item.status}
-                  </button>
-                </td>
-                <td>
-                  <button
-                    className={styled.iconDetails}
-                    onClick={() => router.push("/dialogDetailsFatura")}
-                  >
-                    <CaretRight size={23} />
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+  function handleOpenDialogDetailsFatura() {
+    setOpenDialogDetailsFatura(true);
+    console.log("open")
+  }
+
+  return (
+    <>
+    <DialogDetailsFatura openDialog={openDialogDetailsFatura} closedDialog={handleCloseDialogDetailsFatura}/>
+
+      <div className={styled.container}>
+        <div className={styled.contentTitles}>
+          <div className={styled.titles}>
+            <p style={{ color: "#171717" }}>Todas as faturas</p>
+            <p style={{ color: "#003B6B" }}>Pago</p>
+            <p style={{ color: "#AD1212" }}>Vencido</p>
+            <p style={{ color: "#4E4E4E" }}>Em aberto</p>
+          </div>
+
+          <div>
+            <button className={styled.filtroBtn}>
+              <FunnelSimple size={20} />
+              Filtrar
+            </button>
+          </div>
+        </div>
+        <table className={styled.table}>
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Vencimento</th>
+              <th>Valor</th>
+              <th>Status</th>
+
+              <th>Detalhes</th>
+              <th>Exportar</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {itensTable.map((item) => {
+              return (
+                <tr key={item.id}>
+                  <td>{item.description}</td>
+                  <td>{item.vencimento}</td>
+                  <td>{priceFormatter.format(item.value)}</td>
+                  <td>
+                    <button
+                      className={
+                        item.status === "PAGO"
+                          ? styled.styleStatusPago
+                          : item.status === "EM ABERTO"
+                          ? styled.styleStatusAberto
+                          : styled.styleStatusVencido
+                      }
+                    >
+                      {item.status}
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                    type="button"
+                      className={styled.iconDetails}
+                      onClick={() => handleOpenDialogDetailsFatura()}
+                    >
+                      <CaretRight size={23} />
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                    type="button"
+                      className={styled.iconDetailsExport}
+                      onClick={handleOpenDialogDetailsFatura}
+                    >
+                      <DownloadSimple size={23} />
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }

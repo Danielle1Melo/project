@@ -1,8 +1,171 @@
-.container{
-    padding: 2.9375rem 2.625rem;
-    border-radius: 20px;
+.dialogOverlay {
+    position: fixed;
+    backdrop-filter: blur(20px);
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 2;
+  }
+  
+  .dialogContent {
+    z-index: 2;
     background-color: var(--white);
-    box-shadow: 4px 4px 50px 4px #00000026;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    border-radius: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 68vh;
+    /* overflow-y: scroll; */
+    padding: 28px;
+  }
+
+  .section{
+    background-color:  var(--gray-50);
+    padding: 30px 35px;
+    border-radius: 30px;
+  }
+
+  .top{
+    display: flex;
+  }
+
+  .section > h3{
+    color: var(--text-table);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+    line-height: 24px;
+  }
+
+  .sectionClient{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .client{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .client > p{
+    color: var(--gray);
+    font-size: 21px;
+  }
+
+  .client > h3{
+    color: var(--text-fatura);
+    font-size: 25px;
+  }
+
+
+  .sectionInformation{
+    text-align: right;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .sectionInformation > p {
+    color: var(--gray);
+    font-size: 17px;
+  }
+
+  .sectionInformation > h3 {
+    color: var(--text-fatura);
+    font-size: 25px;
+  }
+
+
+  .table {
+    width: 100%;
+    max-height: 380px;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  
+    color: var(--text-table);
+
 }
+
+.table thead th {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0.95rem 0.1rem;
+    font-size: 18px;
+}
+
+.table thead th:first-child {
+    text-align: left;
+}
+
+.table thead th:last-child {
+    text-align: right;
+    color: var(--gray);
+    font-weight: normal;
+}
+
+.table tbody td {
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+    padding: 0.75rem 0.5rem;
+    text-transform: capitalize;
+    line-height: 16.8px;
+}
+
+.table tbody td:last-child{
+    text-align: right;
+}
+
+.buttonsPaid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 8rem;
+}
+
+.buttonsPaid > button{
+    border: 1px solid var(--text-fatura);
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-fatura);
+    cursor: pointer;
+}
+
+  .iconButton{
+    font-family: inherit;
+    /* border-radius: 100%; */
+    border: none;
+    background-color: transparent !important;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-blue);
+    position: absolute;
+    top: 47px;
+    right: 45px;
+    transition: all 0.3s;
+  }
+
+  .iconButton:hover{
+    color: var(--danger);
+  }
+
+  @media (max-width: 1025px) {
+    .dialogContent {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+
+  }
