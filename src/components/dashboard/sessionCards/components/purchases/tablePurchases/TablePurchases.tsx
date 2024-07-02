@@ -3,6 +3,15 @@
 import { priceFormatter } from "@/utils/formatteNumber";
 import styled from "../../../../../../styles/allStyles/purchases/table.module.css";
 
+interface LegendProps  {
+  legend: any;
+}
+
+const styleInline = {
+  display: "flex",
+  gap: "10px"
+}
+
 export function TablePurchases() {
   return (
     <div>
@@ -15,20 +24,20 @@ export function TablePurchases() {
         </thead>
 
         <tbody>
-          <tr>
-            <td>Abastecimento</td>
+          <tr>                           
+            <td style={styleInline}><div className={styled.circleAbastecimento}></div>Abastecimento</td>
             <td>{priceFormatter.format(46.08)}</td>
           </tr>
           <tr>
-            <td>Shopping</td>
+            <td style={styleInline}><div className={styled.circleShopping}></div>Shopping</td>
             <td>{priceFormatter.format(46.08)}</td>
           </tr>
           <tr>
-            <td>Restaurante</td>
+            <td style={styleInline}><div className={styled.circleRestaurante}></div>Restaurante</td>
             <td>{priceFormatter.format(46.08)}</td>
           </tr>
           <tr>
-            <td>Conveniência</td>
+            <td style={styleInline}><div className={styled.circleConveniência}></div>Conveniência</td>
             <td>{priceFormatter.format(46.08)}</td>
           </tr>
         </tbody>

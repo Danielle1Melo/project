@@ -212,4 +212,8 @@
       width: 100%;
     }
 
+    .table tbody td{
+      font-size: 18px;
+    }
+
   }

@@ -131,7 +131,6 @@
         width: 100%;
     }
 
-
     .styleStatusPago, .styleStatusAberto, .styleStatusVencido{
         background-color: var(--white);
         padding: 1px;

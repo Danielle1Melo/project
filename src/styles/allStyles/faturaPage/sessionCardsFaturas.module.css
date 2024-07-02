@@ -1,60 +1,54 @@
-.sessionSpace{
-    display: flex;
-    flex-direction: column;
+.sessionSpace {
+  display: flex;
+  flex-direction: column;
 }
 
-.main{
-    margin: 3rem 18rem;
-    display: flex;
-    flex-direction: column;
+.main {
+  margin: 3rem 18rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.main01{
-    display: flex;
-    justify-content: space-between;
+.main01 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sessionCard {
-    margin-top: 2rem;
-    display: flex; 
+  margin-top: 2rem;
+  display: flex;    
 }
 
 .sessionTop {
-    display:  flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 
-.sessionTop> h1{
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--first-blue);
-    text-transform: capitalize;
-
+.sessionTop > h1 {          
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--first-blue);
+  text-transform: capitalize;
 }
 
-
-@media (max-width: 1025px){
-    .sessionSpace{
+@media (max-width: 1025px) {
+  /* .sessionSpace{
       width: 100%;
      
-    }
-    .main{
-        
-        margin: 3rem 0.5rem;
- 
-    }
-
-    .main01{
-        flex-direction: column;
-    }
-
-    .sessionCard{
-        width: 100%;
-    }
-
-    .sessionCard{
-        display: block;
-    }
-
+    } */
+  .main {
+    margin: 3rem 0.5rem;
   }
+
+  .main01 {
+    flex-direction: column;
+  }
+
+  .sessionCard {
+    width: 100%;
+  }
+
+  .sessionCard {
+    display: block;
+  }
+}

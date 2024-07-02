@@ -2,39 +2,16 @@ import { X } from "@phosphor-icons/react";
 import styled from "../../../styles/allStyles/faturaPage/dialogDetailsFatura.module.css";
 import * as Dialog from "@radix-ui/react-dialog";
 import { priceFormatter } from "@/utils/formatteNumber";
+import { TableDialog } from "./tableDialog/TableDialo";
 
 interface DialogDetailsFaturaProps {
   openDialog: boolean;
   closedDialog: () => void;
 }
 
-const itensTable = [
-  {
-    id: 1,
-    description: "Descrição Item I",
-    value: 1240,
-  },
-  {
-    id: 2,
-    description: "Descrição Item 2",
-    value: 1240,
-  },
-  {
-    id: 3,
-    description: "Descrição Item 3",
-    value: 1240,
-  },
-  {
-    id: 4,
-    description: "Descrição Item 4",
-    value: 1240,
-  },
-];
 
-const totalValue = itensTable.reduce(
-  (accumulator, currentValue) => accumulator + currentValue.value,
-  0
-);
+
+
 
 export function DialogDetailsFatura({
   openDialog,
@@ -71,33 +48,7 @@ export function DialogDetailsFatura({
           </section>
 
           <main>
-            <table className={styled.table}>
-              <thead>
-                <tr>
-                  <th>Descrição</th>
-                  <th>Valor</th>
-                </tr>
-              </thead>
-              <tbody>
-                {itensTable.map((item) => {
-                  return (
-                    <tr key={item.id}>
-                      <td>{item.description}</td>
-                      <td>{priceFormatter.format(item.value)}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-
-            <div className={styled.totalContainer}>
-              <div className={styled.totalInformation}>
-                <p>
-                  Total <span>(BR)</span>
-                </p>
-                <h3>{priceFormatter.format(totalValue)}</h3>
-              </div>
-            </div>
+            <TableDialog />
 
             <div className={styled.buttonsPaid}>
               <button>Pagar via PIX - QR Code</button>

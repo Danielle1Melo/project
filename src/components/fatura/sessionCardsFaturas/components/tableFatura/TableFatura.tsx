@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
 import {DialogDetailsFatura} from "@/components/fatura/dialogDetailsFatura/dialogDetailsFatura"
-import { it } from "node:test";
+
 
 const itensTable = [
   {

@@ -7,6 +7,7 @@ import { styleText } from "util";
 const GraphChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import styled from "../../../../../../styles/allStyles/purchases/purchases.module.css"
 
+
 export function Graphic() {
   const [widthGraph, setWidthGraph] = useState(420);
   const [horizontalGraph, setHorizontalGraph] = useState(false);
@@ -56,11 +57,13 @@ export function Graphic() {
       show: false,
       position: "bottom",
     },
-    
-responsive: [{
-  breakpoint: 1025,
-  options: 1,
-}]
+
+
+    responsive: [{
+      breakpoint: 1025,
+      options: 1,
+    }],
+  
   };
 
   return (
@@ -72,6 +75,7 @@ responsive: [{
         series={optionsDonutTop.series}
         width={widthGraph}
       />
+    
     </div>
   );
 }

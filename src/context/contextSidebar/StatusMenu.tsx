@@ -15,10 +15,10 @@ export default function StatusMenuContextComponent({ children }: ContextProps) {
   function activeMenu() {
     if (statusMenu == true) {
       setStatusMenu(false);
-      console.log("menu desativando");
+      
     } else {
       setStatusMenu(true);
-      console.log("menu ativando");
+      
     }
   }
 

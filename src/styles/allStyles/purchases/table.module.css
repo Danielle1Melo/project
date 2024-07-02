@@ -27,12 +27,31 @@
 
   }
 
-  .circle{
-    width: 10px;
-    height: 10px;
+  .circleAbastecimento{
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: #06233D;
   }
+  .circleShopping{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #044D88;
+  }
+  .circleRestaurante{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FDCD00;
+  }
+  .circleConveniência{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #E5E7EB;
+  }
+
 
   @media (max-width: 1025px){
     .table{
