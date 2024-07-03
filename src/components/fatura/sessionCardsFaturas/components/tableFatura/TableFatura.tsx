@@ -61,7 +61,7 @@ export function TableFatura() {
     <>
     <DialogDetailsFatura openDialog={openDialogDetailsFatura} closedDialog={handleCloseDialogDetailsFatura}/>
 
-      <div className={styled.container}>
+      <div className={styled.contai0ner}>
         <div className={styled.contentTitles}>
           <div className={styled.titles}>
             <p style={{ color: "#171717" }}>Todas as faturas</p>
