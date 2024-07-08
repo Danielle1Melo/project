@@ -3,7 +3,7 @@
 import { LOGO } from "@/utils/logos";
 import Image from "next/image";
 import styled from "../../styles/allStyles/authenticated.module.css";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Lock, User } from "@phosphor-icons/react";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";

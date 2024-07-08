@@ -3,9 +3,6 @@
 import { priceFormatter } from "@/utils/formatteNumber";
 import styled from "../../../../../../styles/allStyles/purchases/table.module.css";
 
-interface LegendProps  {
-  legend: any;
-}
 
 const styleInline = {
   display: "flex",

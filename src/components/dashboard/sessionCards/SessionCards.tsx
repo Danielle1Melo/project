@@ -8,13 +8,18 @@ import { SelectConta } from "./components/SelectConta";
 import {  useContext, useEffect } from "react";
 import { AuthContext } from "@/context/authContext/AuthContext";
 import { api } from "@/services/api";
+import { GetServerSideProps } from "next";
+import { parseCookies } from "nookies";
+import { getApiClient } from "@/services/axios";
+
+
 
 export function SessionCards() {
   const {user} = useContext(AuthContext);
 
   useEffect(() => {
     //verificar se tem token, se não manda pra login
-    api.get('/users')
+    // api.get('/users')
   }, [])
 
   return (
@@ -40,3 +45,25 @@ export function SessionCards() {
     </section>
   );
 }
+
+export const getServerSideprops: GetServerSideProps = async (ctx) => {
+  const {["nextauth.token"]: token} = parseCookies(ctx);
+  const apiClient = getApiClient(ctx);
+
+  if(!token){
+    return{
+      redirect: {
+        destination: '/',
+        permanent: false,
+      }
+    }
+  }
+
+  await apiClient.get("/users");
+
+  return {
+    props: {}
+  }
+}
+
+

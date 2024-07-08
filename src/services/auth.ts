@@ -1,4 +1,4 @@
-import { uuid } from "uuidv4"
+import { v4 as uuid } from "uuid"
 
 type SignInRequestData = {
     email: string;
@@ -9,6 +9,7 @@ const delay = (amount = 750 ) => new Promise(resolve => setTimeout(resolve, amou
 
 export async function signInRequest({email, password} : SignInRequestData) {
  
+        
     await delay();
 
     return {
@@ -31,3 +32,4 @@ export async function recoverUserInformation(){
         }
     }
 }
+

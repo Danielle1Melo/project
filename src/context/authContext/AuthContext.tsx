@@ -1,7 +1,7 @@
 "use client";
 import { setCookie, parseCookies } from "nookies";
 import { recoverUserInformation, signInRequest } from "@/services/auth";
-import { ReactNode, createContext, use, useEffect, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { User } from "@phosphor-icons/react";
 import { api } from "@/services/api";

@@ -1,170 +1,200 @@
 .container {
-    padding: 2.9375rem 2.625rem;
-    border-radius: 20px;
-    background-color: var(--white);
-    box-shadow: 4px 4px 50px 4px #00000026;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+  padding: 2.9375rem 2.625rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 4px 4px 50px 4px #00000026;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .table {
-    width: 100%;
-    max-height: 360px;
-    border-collapse: collapse;
-    margin-top: 2rem;
-    padding: 0px 0px 0px 50px;
-    color: var(--second-blue);
-
+  width: 100%;
+  max-height: 360px;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  padding: 0px 0px 0px 50px;
+  color: var(--second-blue);
 }
 
-
-
-.container>.table thead th {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 0.95rem 0.5rem;
-    text-align: left;
-    background-color: var(--background-table);
+.container > .table thead th {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.95rem 0.5rem;
+  text-align: left;
+  background-color: var(--background-table);
 }
 
 .table thead th:first-child {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .table thead th:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-
 
 .table tbody td {
-    font-size: 16px;
-    font-weight: 400;
-    text-align: left;
-    padding: 0.75rem 0.5rem;
-    text-transform: capitalize;
-    line-height: 16.8px;
-    border-bottom: solid 1px var(--gray-10);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  text-transform: capitalize;
+  line-height: 16.8px;
+  border-bottom: solid 1px var(--gray-10);
 }
 
-.iconDetails, .iconDetailsExport {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--gray-10);
-    border: none;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
+.iconDetails,
+.iconDetailsExport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-10);
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 
-.styleStatusPago{
-    border: none;
-    background-color: var(--backgroud-icon);
-    border-radius: 20px;
-    padding: 5px 25px;
-    color: var(--second-blue);
-    font-weight: 600;
+.styleStatusPago {
+  border: none;
+  background-color: var(--backgroud-icon);
+  border-radius: 20px;
+  padding: 5px 25px;
+  color: var(--second-blue);
+  font-weight: 600;
 }
 
-.styleStatusVencido{
-    border: none;
-    background-color: var(--backgroud-danger);
-    border-radius: 20px;
-    padding: 5px 25px;
-    color: var(--danger);
-    font-weight: 600;
+.styleStatusVencido {
+  border: none;
+  background-color: var(--backgroud-danger);
+  border-radius: 20px;
+  padding: 5px 25px;
+  color: var(--danger);
+  font-weight: 600;
 }
 
-.styleStatusAberto{
-    border: none;
-    background-color: var(--background-table);
-    border-radius: 20px;
-    padding: 5px 25px;
-    color: var(--font-status-aberto);
-    font-weight: 600;
+.styleStatusAberto {
+  border: none;
+  background-color: var(--background-table);
+  border-radius: 20px;
+  padding: 5px 25px;
+  color: var(--font-status-aberto);
+  font-weight: 600;
 }
 
-.contentTitles{
-    display: flex;
-    justify-content: space-between;
+.contentTitles {
+  display: flex;
+  justify-content: space-between;
 }
 
-.titles{
-    display: flex;
-    gap: 2rem;
-    font-size: 18px;
-    line-height: 29px;
-    border-bottom: solid 1px var(--gray-10);
-    width: 450px;
+.titles {
+  display: flex;
+  gap: 2rem;
+  border-bottom: solid 1px var(--gray-10);
+  width: 450px;
 }
 
-.filtroBtn{
-    border: 1px solid #171717;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 5px 10px;
-    background-color: var(--white );
-    cursor: pointer;
+.titles > button {
+  border: none;
+  background-color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
+.titlePago{
+  color: #003b6b;
+  border-bottom: solid 2px #003b6b;
+}
+
+/* .titlePago:active {
+  border-bottom: solid 2px #003b6b;
+} */
+
+.titleVencido {
+  color: #ad1212;
+}
+.titleVencido:active:dir {
+  border-bottom: solid 2px #ad1212;
+}
+
+.titleAberto {
+  color: #4e4e4e;
+}
+.titleAberto:active:first{
+  border-bottom: solid 2px #4e4e4e;
+}
+
+.filtroBtn {
+  border: 1px solid #171717;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 10px;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.filtroBtn:hover {
+  background-color: var(--backgroud-icon);
+  transition: all 0.4s;
+}
 
 /* .table tbody tr:hover {
     background-color: var(--background-table);
     border-radius: 10px;
-} */ 
-
+} */
 
 @media (max-width: 1025px) {
-    .container{
-        padding: 2.9375rem 2rem;
-    }
+  .container {
+    padding: 2.9375rem 2rem;
+  }
 
+  .table {
+    padding: 0px;
+    width: 100%;
+  }
 
-    .table {
-        padding: 0px;
-        width: 100%;
-    }
+  .styleStatusPago,
+  .styleStatusAberto,
+  .styleStatusVencido {
+    background-color: var(--white);
+    padding: 1px;
+  }
 
-    .styleStatusPago, .styleStatusAberto, .styleStatusVencido{
-        background-color: var(--white);
-        padding: 1px;
-    }
+  .titles {
+    width: 100%;
+  }
 
-    .titles{
-        width: 100%;
-    }
-    
-    .container>.table thead th{
-        padding: 0.95rem 0.1rem;
-    }
+  .container > .table thead th {
+    padding: 0.95rem 0.1rem;
+  }
 
-    .table tbody td{
-        font-size: 12px;
-    
-    }
+  .table tbody td {
+    font-size: 12px;
+  }
 
-    .contentTitles{
-        flex-direction: column;
-    }
+  .contentTitles {
+    flex-direction: column;
+  }
 
-    .filtroBtn{
-        text-align: center;
-        width: 100%;
-        margin-top: 10px;
-    }
+  .filtroBtn {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-    .iconDetailsExport, .container>.table thead th:last-child{
-        display: none;
-    }
-    .container>.table thead th:nth-last-child(2){
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-
+  .iconDetailsExport,
+  .container > .table thead th:last-child {
+    display: none;
+  }
+  .container > .table thead th:nth-last-child(2) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }

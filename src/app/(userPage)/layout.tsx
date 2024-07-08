@@ -4,7 +4,6 @@ import "../../styles/globals.css";
 import StatusMenuContextComponent from "@/context/contextSidebar/StatusMenu";
 import { AuthProvider } from "@/context/authContext/AuthContext";
 
-
 const myFont = localFont({
   src: "../../assets/font/Kollektif.woff2",
   display: "auto",
@@ -22,11 +21,11 @@ export default function UserPageLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <AuthProvider>
-        <StatusMenuContextComponent>
-          <body className={myFont.className}>{children}</body>
-        </StatusMenuContextComponent>
-        </AuthProvider>
+      <StatusMenuContextComponent>
+        <body className={myFont.className}>
+          <AuthProvider>{children}</AuthProvider>
+        </body>
+      </StatusMenuContextComponent>
     </html>
   );
 }
