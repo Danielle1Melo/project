@@ -7,7 +7,7 @@
   height: 119.95px;
 }
 
-.subtitle{
+.subtitle {
   display: none;
 }
 
@@ -22,10 +22,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
 }
 
-.firstSession>h1 {
+.firstSession > h1 {
   font-size: 48px;
   font-weight: 700;
   line-height: 57.6px;
@@ -33,7 +32,7 @@
   text-transform: capitalize;
 }
 
-.firstSession>p {
+.firstSession > p {
   color: var(--first-blue);
   font-size: 40px;
   font-weight: 400;
@@ -52,19 +51,18 @@
   padding: 5rem;
 }
 
-.SecondSession>h3 {
+.SecondSession > h3 {
   font-size: 36px;
   font-weight: 700;
   line-height: 43.2px;
   color: var(--second-blue);
 }
 
-.SecondSession>p {
+.SecondSession > p {
   color: var(--first-blue);
   font-size: 32px;
   font-weight: 400;
   line-height: 38.4px;
-
 }
 
 .form {
@@ -72,7 +70,6 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 3rem;
-
 }
 
 .inputs {
@@ -85,7 +82,7 @@
   font-weight: 400;
 }
 
-.inputs>input {
+.inputs > input {
   border: none !important;
   outline: none;
   font-size: 20px;
@@ -95,21 +92,20 @@
   color: var(--second-blue);
 }
 
-.inputs>input::placeholder {
+.inputs > input::placeholder {
   color: var(--first-blue);
   font-size: 20px;
   font-weight: 500;
   /* line-height: 30px; */
 }
 
-.inputs>input:focus::-webkit-input-placeholder {
+.inputs > input:focus::-webkit-input-placeholder {
   opacity: 0.5;
 }
 
-.icon{
+.icon {
   color: var(--first-blue);
 }
-
 
 .enterBtn {
   background-color: var(--first-blue);
@@ -120,18 +116,57 @@
   padding: 15px 50px 18px 50px;
   border-radius: 25px;
   border: none;
+  width: 100%;
   font-size: 20px;
-
 }
 
-@media (max-width: 1025px){
-  .container{
-      background-color: var(--first-blue);
-      width: 100%;
-      
+.loginFailed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: #b91c1c;
+  background-color: #fee2e2;
+}
+
+.loginFailed > strong {
+  font-weight: bold;
+}
+
+.loginFailed > span {
+  display: block;
+}
+
+.btnloading {
+  display: flex;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  justify-content: center;
+  border-radius: 0.375rem;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #ffffff;
+  background-color: #4f46e5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btnloading:hover {
+  background-color: #6366f1;
+}
+
+@media (max-width: 1025px) {
+  .container {
+    background-color: var(--first-blue);
+    width: 100%;
   }
 
-  .subtitle{
+  .subtitle {
     display: block;
     color: var(--white);
     font-size: 25px;
@@ -139,25 +174,24 @@
     font-weight: 100;
   }
 
-  .logo{
+  .logo {
     margin-top: 9rem;
     height: 150px;
     width: 150px;
   }
 
-  .sessions{ 
+  .sessions {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
-  
   }
 
   .firstSession {
     display: none;
   }
 
-  .SecondSession{
+  .SecondSession {
     margin-top: 10.2rem;
     width: 100%;
     height: 61vh;
@@ -168,19 +202,22 @@
     border-bottom-right-radius: 0px;
   }
 
-  .SecondSession > h3{
+  .SecondSession > h3 {
     font-size: 30px;
   }
-  .SecondSession > p{
+  .SecondSession > p {
     font-size: 25px;
   }
 
-  .inputs>input{
+  .inputs > input {
     font-size: 15px;
-  } 
-
-  .form{
-  gap: 2rem;
   }
 
+  .form {
+    gap: 2rem;
+  }
+
+  .loginFailed > span {
+    display: inline;
+  }
 }

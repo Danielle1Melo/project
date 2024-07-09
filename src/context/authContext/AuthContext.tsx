@@ -1,69 +1,77 @@
-"use client";
-import { setCookie, parseCookies } from "nookies";
-import { recoverUserInformation, signInRequest } from "@/services/auth";
-import { ReactNode, createContext, useEffect, useState } from "react";
+"use client"
+import Cookies from "js-cookie";
+import { createContext, useState, PropsWithChildren, useContext } from "react";
 import { useRouter } from "next/navigation";
-import { User } from "@phosphor-icons/react";
-import { api } from "@/services/api";
 
-type User = {
-  name: string;
+
+export interface UserSession{
   email: string;
-};
-
-type SignInData = {
-  email: string;
-  password: string;
-};
-
-type AutheContentextType = {
-  isAuthenticated: boolean;
-  user?: User;
-  signIn: (data: SignInData) => Promise<void>;
-};
-
-export const AuthContext = createContext({} as AutheContentextType);
-
-interface ContextProps {
-  children: ReactNode;
+  username: string;
 }
 
-export function AuthProvider({ children }: ContextProps) {
+// type User = {
+//   name: string;
+//   email: string;
+// };
+
+// type SignInData = {
+//   email: string;
+//   password: string;
+// };
+
+interface AutheContentextType {
+  user: UserSession | undefined,
+  logout: () => void,
+  onLoginOk: () => void,
+};
+
+const AuthContext = createContext<AutheContentextType | undefined >(undefined);
+
+export const AuthProvider = ({children} : PropsWithChildren) => {
   const router = useRouter();
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<UserSession | undefined>({email: '', username: ''});
 
-  const isAuthenticated = !!user;
+  const fetchUserInformation = async () => {
+    const token = Cookies.get('session');
 
-  useEffect(() => {
-    const { "nextauth.token": token } = parseCookies();
-
-    if (token) {
-      recoverUserInformation().then((response) => {
-        setUser(response.user);
-      });
+    if(!token){
+      return
     }
-  }, []);
 
-  //aqui faria o fetch
-  async function signIn({ password, email }: SignInData) {
-    const { token, user } = await signInRequest({
-      email,
-      password,
-    });
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_AUTHENTICATED}/api/v1/users/me`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
 
-    setCookie(undefined, "nextauth.token", token, {
-      maxAge: 60 * 60 * 1, // 1 hora
-    });
+    const body = await response.json();
+    setUser({email: body.email, username: body.username});
+    
+  }
 
-    api.defaults.headers['Authorization'] = `Bearer ${token}`;
+  const onLoginOk = () => {
+    fetchUserInformation();
+  }
 
-    setUser(user);
-    router.push("/mainPage");
+  const logout = () => {
+    Cookies.remove('session');
+    setUser(undefined);
+    router.push('/');
   }
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, signIn }}>
+    <AuthContext.Provider value={{user, logout, onLoginOk}}>
       {children}
     </AuthContext.Provider>
-  );
+  )
 }
+
+export const useAuth = (): AutheContentextType => {
+  const context = useContext(AuthContext);
+  if(context === undefined){
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
+

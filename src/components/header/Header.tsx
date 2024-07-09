@@ -8,8 +8,12 @@ import { signOut } from "next-auth/react";
 import Image from "next/image";
 import SideBar from "../sidebar/Sidebar";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/authContext/AuthContext";
+
+
 export function HeaderPage() {
   const { activeMenu, statusMenu } = useStatusMenuContext();
+  const {logout} = useAuth();
   const router = useRouter();
 
   return (
@@ -26,7 +30,7 @@ export function HeaderPage() {
         </div>
         <div className={styled.sairBtn}>
           <SignOut size={35} color="#ffffff" />
-          <button type="button" onClick={() => router.push("/")}>
+          <button type="button" onClick={() => logout()}>
             Sair
           </button>
         </div>

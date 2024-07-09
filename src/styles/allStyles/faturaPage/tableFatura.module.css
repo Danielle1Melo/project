@@ -102,29 +102,67 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  display: inline;
+  text-align: center;
 }
 
-.titlePago{
+/* PAGO */
+.titlePago {
   color: #003b6b;
-  border-bottom: solid 2px #003b6b;
 }
 
-/* .titlePago:active {
+.titlePago::after {
+  content: "";
+  display: block;
   border-bottom: solid 2px #003b6b;
-} */
+  transform: scaleX(0);
+  transform-origin: 200%;
+  transition: transform 1s cubic-bezier(.57, .21, .69, 1);
+}
 
+.titlePago:focus::after{
+  transform: scaleX(1);
+  transform-origin: -200%;
+  transition: transform 1s cubic-bezier(.57, .21, .69, 1);
+}
+
+/* VENCIDO */
 .titleVencido {
   color: #ad1212;
 }
-.titleVencido:active:dir {
+.titleVencido::after {
+  content: "";
+  display: block;
   border-bottom: solid 2px #ad1212;
+  transform: scaleX(0);
+  transform-origin: 200%;
+  transition: transform 1s cubic-bezier(.57, .21, .69, 1);
 }
+
+.titleVencido:focus::after{
+  transform: scaleX(1);
+  transform-origin: -200%;
+  transition: transform 1s cubic-bezier(.57, .21, .69, 1);
+}
+
+/* EM ABERTO */
 
 .titleAberto {
   color: #4e4e4e;
 }
-.titleAberto:active:first{
+.titleAberto::after {
+  content: "";
+  display: block;
   border-bottom: solid 2px #4e4e4e;
+  transform: scaleX(0);
+  transform-origin: 200%;
+  transition: transform 1s cubic-bezier(.57, .21, .69, 1);
+}
+
+.titleAberto:focus::after{
+  transform: scaleX(1);
+  transform-origin: -200%;
+  transition: transform 1s cubic-bezier(.57, .21, .69, 1);
 }
 
 .filtroBtn {
