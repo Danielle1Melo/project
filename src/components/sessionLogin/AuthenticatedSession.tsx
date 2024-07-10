@@ -5,7 +5,6 @@ import Image from "next/image";
 import styled from "../../styles/allStyles/authenticated.module.css";
 import { useRouter } from "next/navigation";
 import { Lock, User } from "@phosphor-icons/react";
-import { useForm } from "react-hook-form";
 import { FormEvent, useState } from "react";
 import { useAuth } from "@/context/authContext/AuthContext";
 
@@ -18,7 +17,7 @@ enum LoginStatus {
 
 export default function AuthenticatedSession() {
   const router = useRouter();
-  const { onLoginOk } = useAuth();  
+  const { onLoginOk } = useAuth();
   const [loginStatus, setLoginStatus] = useState<LoginStatus>(
     LoginStatus.NotInitialized
   );
@@ -31,7 +30,7 @@ export default function AuthenticatedSession() {
     const email = formData.get("email");
     const password = formData.get("password");
 
-    const response = await fetch(`/api/login`, {
+    const response = await fetch(`pages/api/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

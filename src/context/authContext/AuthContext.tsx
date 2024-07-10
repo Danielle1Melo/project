@@ -1,77 +1,81 @@
-"use client"
-import Cookies from "js-cookie";
-import { createContext, useState, PropsWithChildren, useContext } from "react";
+"use client";
+
+import Cookie from "js-cookie";
+import {
+  createContext,
+  useState,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+} from "react";
 import { useRouter } from "next/navigation";
 
-
-export interface UserSession{
+export interface UserSession {
   email: string;
   username: string;
 }
 
-// type User = {
-//   name: string;
-//   email: string;
-// };
-
-// type SignInData = {
-//   email: string;
-//   password: string;
-// };
-
 interface AutheContentextType {
-  user: UserSession | undefined,
-  logout: () => void,
-  onLoginOk: () => void,
-};
+  user: UserSession | undefined;
+  logout: () => void;
+  onLoginOk: () => void;
+}
 
-const AuthContext = createContext<AutheContentextType | undefined >(undefined);
+const AuthContext = createContext<AutheContentextType | undefined>(undefined);
 
-export const AuthProvider = ({children} : PropsWithChildren) => {
+export const AuthProvider = ({ children }: PropsWithChildren) => {
   const router = useRouter();
-  const [user, setUser] = useState<UserSession | undefined>({email: '', username: ''});
+  const [user, setUser] = useState<UserSession | undefined>({
+    email: "",
+    username: "",
+  });
+
+  useEffect(() => {
+    fetchUserInformation();
+  }, []);
 
   const fetchUserInformation = async () => {
-    const token = Cookies.get('session');
+    const token = Cookie.get("session");
 
-    if(!token){
-      return
+    if (!token) {
+      return;
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_AUTHENTICATED}/api/v1/users/me`, {
-      method: 'GET',
-      headers: {
-        'Authorization': `Bearer ${token}`
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_AUTHENTICATED}/api/v1/users/me`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       }
-    })
+    );
 
     const body = await response.json();
-    setUser({email: body.email, username: body.username});
-    
-  }
+    setUser({ email: body.email, username: body.username });
+  };
 
   const onLoginOk = () => {
     fetchUserInformation();
-  }
+  };
 
   const logout = () => {
-    Cookies.remove('session');
+    Cookie.remove("session");
     setUser(undefined);
-    router.push('/');
-  }
+    router.push("/");
+  };
 
   return (
-    <AuthContext.Provider value={{user, logout, onLoginOk}}>
+    <AuthContext.Provider value={{ user, logout, onLoginOk }}>
       {children}
     </AuthContext.Provider>
-  )
-}
+  );
+};
 
 export const useAuth = (): AutheContentextType => {
   const context = useContext(AuthContext);
-  if(context === undefined){
-    throw new Error('useAuth must be used within an AuthProvider');
+  if (context === undefined) {
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
-}
-
+};
